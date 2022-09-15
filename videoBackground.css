@@ -1,0 +1,124 @@
+html{
+    background-color: bisque;
+}
+/* Importing Nunito Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+
+    /* box-sizing includes padding and a border when setting a width or height*/
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #4b5169;
+}
+
+#main{
+    position:relative;
+    /* VH (Viewport Height determines the height of the element by setting it to a percentage of the viewport */
+    /* VW for width */
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("media/cover.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Object-fit property determines how a video/image is resized to fit inside its container. Setting the value to cover causes the video to retain its aspect ratio and fill the given dimensions */
+    object-fit: cover;
+
+    /* Blur Video */
+    /* filter: blur(5px);
+    transform: scale(1.15); */
+
+}
+#cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, .55);
+}
+
+#content {
+    color: antiquewhite;
+    z-index: 2;
+    text-align: center;
+}
+
+#click{
+    /* inline-block allows you to set up top and bottom margin as well as width and height. */
+    display: inline-block;
+    margin-top: 25px;
+    border: 2px solid whitesmoke;
+    padding: 10px 30px;
+    background-color: #4b5169;
+    color: antiquewhite;
+    /* A elements will not inherit text color like other text elements. Must apply directly */
+    border-radius: 10px;
+    font-size: 25px;
+    opacity: 0.8;
+    
+}
+
+#click:hover{
+    transform: scale(.95);
+}
+
+#about{
+    padding: 50px;
+    text-align: center;
+}
+
+#about p {
+    /* descendant selector */
+    font-size: 20px;
+    max-width: 500px;
+    margin: auto;
+
+}
+#about h2{
+    margin: 20px 0;
+    color: #4b5169;
+}
+
+i {
+    font-size: 48px;
+    margin: 0 10px;
+}
